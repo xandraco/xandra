@@ -43,7 +43,7 @@ def authorize
     #  user_id: user_id, code: code, base_url: OOB_URI)
   #end
   #credentials
-#end
+end
 
 # Initialize the API
 service = Google::Apis::CalendarV3::CalendarService.new
