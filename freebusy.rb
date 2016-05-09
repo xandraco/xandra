@@ -30,8 +30,8 @@ def authorize
   authorizer = Google::Auth::UserAuthorizer.new(
     client_id, SCOPE, token_store)
   user_id = 'default'
-  #credentials = authorizer.get_credentials(user_id)
-  credentials = 4/nnBofWjEuAAYsUl2KM3FZ3Yk1UxrekTyneO-zcfdFWM
+  credentials = authorizer.get_credentials(user_id)
+  #credentials = 4/nnBofWjEuAAYsUl2KM3FZ3Yk1UxrekTyneO-zcfdFWM
   #if credentials.nil?
   #  url = authorizer.get_authorization_url(
   #    base_url: OOB_URI)
