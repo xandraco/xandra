@@ -12,7 +12,7 @@ require 'date'
 OOB_URI = 'urn:ietf:wg:oauth:2.0:oob'
 APPLICATION_NAME = 'Google Calendar API Ruby Quickstart'
 CLIENT_SECRETS_PATH = 'client_secret.json'
-CREDENTIALS_PATH = File.join(Dir.home, '.credentials',
+CREDENTIALS_PATH = File.join(Dir.home, 'config',
                              "calendar-ruby-quickstart.yaml")
 SCOPE = Google::Apis::CalendarV3::AUTH_CALENDAR
 
@@ -69,7 +69,6 @@ get '/freebusy/:start_time/:end_time' do
     )
 
 # Respond with "Free" or "Busy" for testing only
-
   if response.items.empty?
       available = "Free"
     else
