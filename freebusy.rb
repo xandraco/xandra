@@ -12,7 +12,7 @@ require 'date'
 OOB_URI = 'urn:ietf:wg:oauth:2.0:oob'
 APPLICATION_NAME = 'Google Calendar API Ruby Quickstart'
 CLIENT_SECRETS_PATH = 'client_secret.json'
-CREDENTIALS_PATH = File.join(Dir.home, 'config',
+CREDENTIALS_PATH = File.join(Dir.home, '.credentials',
                              "calendar-ruby-quickstart.yaml")
 SCOPE = Google::Apis::CalendarV3::AUTH_CALENDAR
 
@@ -44,10 +44,11 @@ def authorize
   credentials
 end
 
+
 # Initialize the API
 service = Google::Apis::CalendarV3::CalendarService.new
 service.client_options.application_name = APPLICATION_NAME
-service.authorization = authorize
+#service.authorization = authorize
 
 # Create bookable resources
 boardroom = 'sparkbureau.co_dgruu710vf146n88afsvj4pm84@group.calendar.google.com'
